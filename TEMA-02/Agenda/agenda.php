@@ -1,5 +1,19 @@
 <?php 
 
+
+//idea en el formulario differente con el get
+
+if(isset($_GET['contactos'])){
+
+    $contactos = json_decode($_POST['contactos'], true);
+    if($_POST["reset"]){
+        unset($contactos);
+    }
+}
+else {
+    //Todo el codigo de abajo aquí
+}
+
 if (isset($_POST['contactos'])){
     // Recuperamos los contactos del input hidden
     $contactos = json_decode($_POST['contactos'], true);
